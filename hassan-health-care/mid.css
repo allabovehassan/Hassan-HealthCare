@@ -1,0 +1,165 @@
+body{
+    background-color: #f6f6f6;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+#mid {
+  /* border: 1px solid red; */
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-top: -2%;
+  background-color: white;
+}
+
+#mid1 {
+  /* border: 1px solid green; */
+  height: auto;
+  width: 69%;
+}
+#mid2 {
+  /* border: 1px solid red; */
+  width: 31%;
+  height: auto;
+}
+#mid2 > img {
+  width: 100%;
+  height: 228px;
+}
+
+#midtxt {
+  display: flex;
+  /* margin: auto; */
+  /* border: 1px solid black; */
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* font-size: 10px; */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.productshead{
+    display: flex;
+    border: 1px solid red;
+    justify-content: space-between;
+}
+.productshead>span{
+    margin-left: 4%;
+}
+
+.productshead>button{
+    margin-right: 4%;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 4px;
+}
+
+.productstack{
+    border: 1px solid teal;
+    height:200px;
+    width: 100%;
+
+}
+
+
+#footer{
+    margin-top: 5%;
+    border: 1px solid black;
+    height: 800px;
+    width: 100%;
+}
+
+#footer1{
+    margin-top: 5%;
+    border: 1px solid purple;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer11{
+     /* margin-top: 5%; */
+    border: 1px solid teal;
+    height: 300px;
+    width: 18%;
+    font-family: "Source Sans Pro", sans-serif;
+    text-align: left;
+    padding-left: 3%;
+}
+.footer11>p{
+    margin: 1%;
+}
+.footer11>h4{
+    margin-bottom: 10%;
+}
+
+#Slink{
+    /* border: 1px solid red; */
+    width: 100%;
+    height:17%;
+    display: flex;
+    justify-content: space-between;
+}
+#Slink~button{
+    border: none;
+    color: white;
+    background-color: #ff6f61;
+    border-radius: 4px;
+    height: 15%;
+    width: 50%;
+    font-size: large;
+}
+
+#Slink>div{
+    /* border: 1px solid yellow; */
+    height:95%;
+    width:15%
+}
+
+.Slinkimg{
+    width: 100%;
+}
+/* 
+.slider{
+   align-content: center;
+   justify-content: center;
+    margin: auto;
+    border:1px solid teal;
+    width: 1000px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s ;
+}
+
+.slide img{
+    width: 100%;
+    height: 200px;
+}
+
+.navigation-manual{
+position: absolute;
+width: 800px;
+}
+
+
+.manual-btn{
+    border: 2px solid yellow;
+} */
