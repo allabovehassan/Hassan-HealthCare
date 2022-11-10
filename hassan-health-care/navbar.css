@@ -1,5 +1,5 @@
 #navbar {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 190px;
   width: 100%;
   justify-content: space-around;
@@ -66,6 +66,7 @@
   margin-top: 10px;
   width: 100%;
   /* border: 1px solid gray; */
+  margin-bottom: -1%;
 }
 
 #nav21 {
@@ -137,6 +138,7 @@
 
 #nav3 {
   /* border: 1px solid teal; */
+  /* padding-bottom: 12%; */
   height: auto;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
@@ -144,6 +146,7 @@
   justify-content: space-around;
   width: 100%;
   /* margin: auto; */
+  /* margin-bottom: 10px; */
 }
 
 #nav30 > div {

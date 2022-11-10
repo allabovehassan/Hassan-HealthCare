@@ -13,34 +13,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./mid.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./index.js"></script>
   </head>
   <body>
     <div id="navbar">
       <div id="nav1">
         <div id="navimg">
-          <img src="./standing-frog-1055-logo-white (1) (1).png" alt="logo" />
+          <img
+            src="./images/standing-frog-1055-logo-white (1) (1).png"
+            alt="logo"
+          />
         </div>
         <div id="nav11">
           <h4 style="color: #ff6f61">MEDICINE</h4>
@@ -55,15 +36,16 @@
           <h4>Offers</h4>
           <img
             id="cartbutton"
-            src="./trolley.png"
+            src="./images/trolley.png"
             onclick="window.location.href = './carts.html';"
           />
           <h4>Need Help?</h4>
         </div>
       </div>
+      <hr />
       <div id="nav2">
         <div id="nav20">
-          <img src="./pin.png" alt="pin" />
+          <img src="./images/pin.png" alt="pin" />
         </div>
         <div id="nav21">
           <input type="text" placeholder="Location" />
@@ -79,6 +61,7 @@
           <button>Quick Order</button>
         </div>
       </div>
+      <hr />
       <div id="nav3">
         <div id="nav30">
           <h5>Health Resource Center</h5>
@@ -87,7 +70,7 @@
             <p>All Medicines</p>
             <p>Medicines by Therpeutic Class</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav31">
           <h5>Vitamins & Nutrients</h5>
@@ -101,7 +84,7 @@
             <p>Immunity Booster</p>
             <p>Weight Managment</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav32">
           <h5>Diabetes</h5>
@@ -113,7 +96,7 @@
             <p>Diabetic Diet</p>
             <p>Diabetic Food Health</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav33">
           <h5>Health Care Device</h5>
@@ -123,7 +106,7 @@
             <p>Exercise Equipments</p>
             <p>Doctors's Corner</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav34">
           <h5>Personal Care</h5>
@@ -133,7 +116,7 @@
             <p>Ellderly care</p>
             <p>Hair Care</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav35">
           <h5>Homeopathy</h5>
@@ -145,7 +128,7 @@
             <p>Dr Batra's</p>
             <p>Bhandari</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav36">
           <h5>Covid Essentials</h5>
@@ -157,7 +140,7 @@
             <p>Thermometer</p>
             <p>ChawanPrash</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
         <div id="nav37">
           <h5>Featured</h5>
@@ -170,10 +153,11 @@
             <p>Top Brands</p>
             <p>Super Saving</p>
           </div>
-          <div><img src="./down-arrow.png" alt="" /></div>
+          <div><img src="./images/down-arrow.png" alt="" /></div>
         </div>
       </div>
     </div>
+    <hr />
     <div id="mid">
       <div id="mid1">
         <div
@@ -245,12 +229,29 @@
         Hassan Healthcare: India’s Leading Online Pharmacy & Healthcare Platform
       </h2>
     </div>
-
+    <!-- product start -->
+    <!-- 1strow -->
     <div class="productshead">
-      <span>Popular Combo Deals </span>
+      <span>Featured Products </span>
       <button>See More</button>
     </div>
-    <div class="productstack"></div>
+    <div id="productstack1"></div>
+
+    <!-- 2ndrow -->
+    <!-- <div class="productshead">
+      <span> Popular Combo Deals</span>
+      <button>See More</button>
+    </div>
+    <div id="productstack2"></div> -->
+
+    <!-- 3rdrow -->
+    <!-- <div class="productshead">
+      <span>Shop By Brand </span>
+      <button>See More</button>
+    </div>
+    <div id="productstack3"></div> -->
+
+    <!-- product end -->
     <div id="footer">
       <div id="footer1">
         <div class="footer11">
@@ -286,38 +287,189 @@
         <div class="footer11">
           <h4>Connect</h4>
           <p>Social Links</p>
-          <div id="Slink">
-            <div><img class="Slinkimg" src="./instagram.png" alt=""></div>
-            <div><img class="Slinkimg"src="./facebook.png" alt=""></div>
-            <div><img class="Slinkimg"src="./twitter.png" alt=""></div>
-            <div><img class="Slinkimg"src="./youtube.png" alt=""></div>
-            <div><img class="Slinkimg"src="./github.png" alt=""></div>
-            <div><img class="Slinkimg"src="./linkedin.png" alt=""></div>
-            
+          <div
+            id="Slink"
+            onclick="window.location.href = 'https://www.instagram.com/allabovehassan/';"
+          >
+            <div>
+              <img class="Slinkimg" src="./images/instagram.png" alt="" />
+            </div>
+            <div>
+              <img class="Slinkimg" src="./images/facebook.png" alt="" />
+            </div>
+            <div>
+              <img class="Slinkimg" src="./images/youtube.png" alt="" />
+            </div>
+            <div><img class="Slinkimg" src="./images/github.png" alt="" /></div>
+            <div>
+              <img class="Slinkimg" src="./images/linkedin.png" alt="" />
+            </div>
+            <div>
+              <img class="Slinkimg" src="./images/twitter.png" alt="" />
+            </div>
           </div>
           <p>Want daily dose of health?</p>
-          <button>
-            SIGN UP
-          </button>
+          <button>SIGN UP</button>
         </div>
         <div class="footer11">
-          <h4>Download App</h4>
-          <p>About Us</p>
-          <p>Contact Us</p>
-          <p>Press Coverage</p>
-          <p>Careers</p>
-          <p>Business Partnership</p>
-          <p>Become a Health Partner</p>
-          <p>Corporate Governance</p>
+          <h4 style="margin-bottom: -2%">Download App</h4>
+          <div><img class="Dimg" src="./images/Applestore.png" alt="" /></div>
+          <div><img class="Dimg" src="./images/googleplay.png" alt="" /></div>
         </div>
       </div>
-      <div id="footer2"></div>
-      <div id="footer3"></div>
-      <div id="footer4"></div>
-      <div id="footer5"></div>
+      <hr />
+      <div id="footer2">
+        <div id="footer21">
+          <div class="footer2img"><img src="./reliable.png" alt="" /></div>
+          <div>
+            <h5>Reliable</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              laudantium quo aliquam!
+            </p>
+          </div>
+        </div>
+
+        <div id="footer22">
+          <div class="footer2img"><img src="./security.png" alt="" /></div>
+          <div>
+            <h5>Secure</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+              laudantium aliquam!
+            </p>
+          </div>
+        </div>
+
+        <div id="footer23">
+          <div class="footer2img">
+            <img style="width: 85%" src="./wallet.png" alt="" />
+          </div>
+          <div>
+            <h5>Wallet</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. aliquam!
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="footer3">
+        <div id="footer31">
+          <p>
+            © 2022 Hassan Health Care. All rights reserved. In compliance with
+            Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945,
+            we don't process requests for Schedule X and other habit forming
+            drugs.
+          </p>
+        </div>
+        <div id="footer32">
+          <img src="./images/visa.png" alt="" />
+          <img src="./images/american-express.png" alt="" />
+          <img src="./images/credit-card.png" alt="" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<script src="./home.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+<!-- <script>
+  let medData = [
+  {
+    image_url:
+      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/4a9ea3e4485e4bb3970489f406ec2223.jpg",
+    name: "Tata Go Fit Plant Protein for Women Rich Chocolate",
+    price: 7599,
+    strikedoffprice: 9999,
+  },
+  {
+    image_url:
+      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/ga3wcjor5sw9sam0zqkv.jpg",
+    name: "Saridon Advance Severe Headache Relief Tablet",
+    price: 909,
+    strikedoffprice: 1299,
+  },
+  {
+    image_url:
+      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/olktgznfpdbnm3cbarfb.jpg",
+    name: "Dettol Original Instant Hand Sanitizer",
+    price: 779,
+    strikedoffprice: 1299,
+  },
+  {
+    image_url:
+      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/yv3rqqcmdyjlycajye7d.jpg",
+    name: "Optimum Nutrition (ON) Gold Standard 100% Whey Protein Isolate Powder Double Rich Chocolate",
+    price: 2099,
+    strikedoffprice: 2499,
+  },
+  {
+    image_url:
+      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/nbrq3ciikm0fgphiyujz.jpg",
+    name: "Inlife Curcumin C3 Complex (95% Curcuminoids)500 mg Turmeric with BioPerine",
+    price: 650,
+    strikedoffprice: 1799,
+  },
+];
+
+
+let cartsArr = JSON.parse(localStorage.getItem("cartspage")) || [];
+
+medData.forEach((elem,i) => {
+  displayTable(elem,i);
+});
+
+function displayTable(elem,i) {
+  let card = document.createElement("div");
+
+  let image = document.createElement("img");
+  image.setAttribute("src", elem.image_url);
+  image.style.width = "70%";
+  image.style.height = "70%";
+
+  let head = document.createElement("h4");
+  head.innerText = elem.name;
+
+  let price1 = document.createElement("p");
+  price1.innerText = elem.price;
+
+  let price2 = document.createElement("p");
+  price2.innerText = elem.strikedoffprice;
+  price2.style.textDecoration = "line-through";
+
+  let button = document.createElement("button");
+  button.innerText = "Add To Cart";
+  button.addEventListener("click", function () {
+    cartsArr.push(elem);
+    localStorage.setItem("cartspage", JSON.stringify(cartsArr));
+  });
+
+  card.append(image, head, price1, price2, button);
+
+  document.querySelector("#productstack1").append(card);
+}
+</script> -->
 <!-- <div class="slider">
         <div class="slides">
           <input type="radio" name="radio-btn" id="radio1" />
