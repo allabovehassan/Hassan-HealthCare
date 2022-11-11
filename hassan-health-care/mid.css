@@ -61,18 +61,23 @@ body {
   color: white;
   border-radius: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
 }
 
 
 
 #productstack1 {
-  padding-left: 3%;
-  padding-top: 2%;
+  /* height: 1500px; */
+  padding: 15px;
+   padding-left: 3%;
+  padding-top: 2%; 
+  padding-bottom: 2%; 
   justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(6,1fr);
   grid-template-rows: auto;
   row-gap: 1%;
+  /* column-gap: 1px; */
   margin-top: 1%;
   /* border: 1px solid teal; */
   /* height: ; */
@@ -154,6 +159,7 @@ body {
   height: 15%;
   width: 50%;
   font-size: large;
+  cursor: pointer;
 }
 
 #Slink > div {

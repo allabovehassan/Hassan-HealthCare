@@ -21,6 +21,7 @@
           <img
             src="./images/standing-frog-1055-logo-white (1) (1).png"
             alt="logo"
+            onclick="location.reload()"
           />
         </div>
         <div id="nav11">
@@ -32,12 +33,14 @@
           <h4>CARE PLAN</h4>
         </div>
         <div id="nav12">
-          <h4>Login | Sign Up</h4>
+          <h4 onclick="window.location.href = '/Login/signup.html';">
+            Login | Sign Up
+          </h4>
           <h4>Offers</h4>
           <img
             id="cartbutton"
             src="./images/trolley.png"
-            onclick="window.location.href = './carts.html';"
+            onclick="window.location.href = '/carts.html';"
           />
           <h4>Need Help?</h4>
         </div>
@@ -52,13 +55,17 @@
         </div>
         <div id="nav22">
           <input
+            id="searchm"
             type="text"
             placeholder="Search for Medicines and Health Products"
+            onclick="location.href = '/products.html';"
           />
         </div>
         <div id="nav23">
           <span id="nav23txt"> Quick Buy! Get upto 25% off on Medicines </span>
-          <button>Quick Order</button>
+          <button onclick="window.location.href = '/carts.html';">
+            Quick Order
+          </button>
         </div>
       </div>
       <hr />
@@ -233,7 +240,7 @@
     <!-- 1strow -->
     <div class="productshead">
       <span>Featured Products </span>
-      <button>See More</button>
+      <button onclick="productspage()">See More</button>
     </div>
     <div id="productstack1"></div>
 
@@ -309,7 +316,9 @@
             </div>
           </div>
           <p>Want daily dose of health?</p>
-          <button>SIGN UP</button>
+          <button onclick="window.location.href = '/Login/signup.html';">
+            SIGN UP
+          </button>
         </div>
         <div class="footer11">
           <h4 style="margin-bottom: -2%">Download App</h4>
@@ -320,7 +329,9 @@
       <hr />
       <div id="footer2">
         <div id="footer21">
-          <div class="footer2img"><img src="./reliable.png" alt="" /></div>
+          <div class="footer2img">
+            <img src="./images/reliable.png" alt="" />
+          </div>
           <div>
             <h5>Reliable</h5>
             <p>
@@ -331,7 +342,9 @@
         </div>
 
         <div id="footer22">
-          <div class="footer2img"><img src="./security.png" alt="" /></div>
+          <div class="footer2img">
+            <img src="./images/security.png" alt="" />
+          </div>
           <div>
             <h5>Secure</h5>
             <p>
@@ -343,7 +356,7 @@
 
         <div id="footer23">
           <div class="footer2img">
-            <img style="width: 85%" src="./wallet.png" alt="" />
+            <img style="width: 85%" src="./images/wallet.png" alt="" />
           </div>
           <div>
             <h5>Wallet</h5>
@@ -394,128 +407,3 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
-<!-- <script>
-  let medData = [
-  {
-    image_url:
-      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/4a9ea3e4485e4bb3970489f406ec2223.jpg",
-    name: "Tata Go Fit Plant Protein for Women Rich Chocolate",
-    price: 7599,
-    strikedoffprice: 9999,
-  },
-  {
-    image_url:
-      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/ga3wcjor5sw9sam0zqkv.jpg",
-    name: "Saridon Advance Severe Headache Relief Tablet",
-    price: 909,
-    strikedoffprice: 1299,
-  },
-  {
-    image_url:
-      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/olktgznfpdbnm3cbarfb.jpg",
-    name: "Dettol Original Instant Hand Sanitizer",
-    price: 779,
-    strikedoffprice: 1299,
-  },
-  {
-    image_url:
-      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/yv3rqqcmdyjlycajye7d.jpg",
-    name: "Optimum Nutrition (ON) Gold Standard 100% Whey Protein Isolate Powder Double Rich Chocolate",
-    price: 2099,
-    strikedoffprice: 2499,
-  },
-  {
-    image_url:
-      "https://onemg.gumlet.io/a_ignore,w_380,h_380,c_fit,q_auto,f_auto/cropped/nbrq3ciikm0fgphiyujz.jpg",
-    name: "Inlife Curcumin C3 Complex (95% Curcuminoids)500 mg Turmeric with BioPerine",
-    price: 650,
-    strikedoffprice: 1799,
-  },
-];
-
-
-let cartsArr = JSON.parse(localStorage.getItem("cartspage")) || [];
-
-medData.forEach((elem,i) => {
-  displayTable(elem,i);
-});
-
-function displayTable(elem,i) {
-  let card = document.createElement("div");
-
-  let image = document.createElement("img");
-  image.setAttribute("src", elem.image_url);
-  image.style.width = "70%";
-  image.style.height = "70%";
-
-  let head = document.createElement("h4");
-  head.innerText = elem.name;
-
-  let price1 = document.createElement("p");
-  price1.innerText = elem.price;
-
-  let price2 = document.createElement("p");
-  price2.innerText = elem.strikedoffprice;
-  price2.style.textDecoration = "line-through";
-
-  let button = document.createElement("button");
-  button.innerText = "Add To Cart";
-  button.addEventListener("click", function () {
-    cartsArr.push(elem);
-    localStorage.setItem("cartspage", JSON.stringify(cartsArr));
-  });
-
-  card.append(image, head, price1, price2, button);
-
-  document.querySelector("#productstack1").append(card);
-}
-</script> -->
-<!-- <div class="slider">
-        <div class="slides">
-          <input type="radio" name="radio-btn" id="radio1" />
-          <input type="radio" name="radio-btn" id="radio2" />
-          <input type="radio" name="radio-btn" id="radio3" />
-          <input type="radio" name="radio-btn" id="radio4" />
-        
-
-          <div class="silde">
-            <img
-              src="https://onemg.gumlet.io/77b1ee16-5be4-4b88-8548-0c2edee0bc2f_1664867755.jpeg?w=1055&h=250&format=auto"
-              alt=""
-            />
-          </div>
-
-          <div class="slide">
-            <img
-              src="https://onemg.gumlet.io/a_ignore,w_1055,h_250,c_fit,q_auto,f_auto/a5495530-beb6-48b5-8554-3ae7271fe7e8.png"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              src="https://onemg.gumlet.io/a_ignore,w_1055,h_250,c_fit,q_auto,f_auto/c5c79b59-a029-48a4-b1ca-5a3167c5619e.png"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              src="https://onemg.gumlet.io/a_ignore,w_1055,h_250,c_fit,q_auto,f_auto/45999389-915f-4b04-971e-c0c09450a084.png"
-              alt=""
-            />
-          </div>
-        
-
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
-        </div>
-        <div class="navigation-manual">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-          <label for="radio4" class="manual-btn"></label>
-        </div>
-      </div> -->

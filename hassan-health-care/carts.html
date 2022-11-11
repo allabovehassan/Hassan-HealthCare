@@ -17,10 +17,19 @@
   <body>
     <div id="top">
       <div id="top1">
-        <img src="./images/standing-frog-1055-logo-white (1) (1).png" alt="" />
+        <img
+          src="./images/standing-frog-1055-logo-white (1) (1).png"
+          alt=""
+          onclick="window.location.href = '/index.html';"
+        />
       </div>
       <div id="top2">
-        <input type="text" placeholder="Search Medicines" />
+        <input
+          id="aaaa"
+          type="text"
+          placeholder="Search Items in Cart"
+          oninput="search()"
+        />
       </div>
       <div id="top3">
         <p>Need Help?</p>
@@ -31,9 +40,12 @@
         <p>Total Item-</p>
         <h6 class="itemcount">0</h6>
       </div>
+      <div id="buynow">
+        <button onclick="yoyo()">Buy Now</button>
+      </div>
       <div id="item2">
         <p>Total Price-</p>
-        <p id="#tp">0</p>
+        <p id="tp"></p>
       </div>
     </div>
 
@@ -43,131 +55,115 @@
 </html>
 <script>
   let newArr = JSON.parse(localStorage.getItem("cartspage")) || [];
-  newArr.forEach((elem, index) => {
-    displayTable(elem, index);
-  });
+  // newArr.forEach((elem, index) => {
+  //   displayTable(elem, index);
+  // });
+
   temp();
   function temp() {
     document.querySelector(".itemcount").innerText = newArr.length;
-    console.log("hello");
+    // console.log("hello");
   }
+  total = newArr.reduce((acc, elem) => {
+    return acc + elem.price;
+  }, 0);
+  total = Math.floor(total);
+  document.getElementById("tp").innerText = "₹ " + total;
+  console.log(total);
 
-  function displayTable(elem, i) {
-    let card = document.createElement("div");
-    // card.style.border="1px solid orange"
-    // card.style.paddingBottom = "-200px";
-    card.style.width = "79%";
-    card.style.height = "auto";
-    card.style.boxShadow =
-      "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px";
+  displayTable(newArr);
 
-    let imgdiv = document.createElement("div");
-    // imgdiv.style.border = "1px solid green";
-    imgdiv.style.height = "350px";
-    imgdiv.style.marginTop = "20px";
-    imgdiv.style.display = "flex";
-    imgdiv.style.justifyContent = "center";
+  function displayTable(newarr) {
+    newarr.forEach((elem, i) => {
+      let card = document.createElement("div");
+      // card.style.border="1px solid orange"
 
-    let image = document.createElement("img");
-    image.setAttribute("src", elem.image_url);
-    image.style.width = "60%";
+      card.style.alignItems = "center";
+      card.style.width = "60%";
+      card.style.margin = "auto";
+      card.style.height = "auto";
+      card.style.display = "flex";
+      card.style.boxShadow =
+        "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px";
 
-    image.style.height = "auto";
+      let imgdiv = document.createElement("div");
+      // imgdiv.style.border = "1px solid green";
+      imgdiv.style.height = "350px";
+      imgdiv.style.width = "350px";
+      imgdiv.style.marginTop = "20px";
+      imgdiv.style.display = "flex";
+      imgdiv.style.justifyContent = "center";
 
-    imgdiv.append(image);
+      let image = document.createElement("img");
+      image.setAttribute("src", elem.image_url);
+      image.style.width = "60%";
+      image.style.height = "auto";
 
-    let datadiv = document.createElement("div");
-    //  datadiv.style.border = "1px solid black";
-    datadiv.style.textAlign = "Center";
-    datadiv.style.marginTop = "5%";
-    // datadiv.style.marginBottom = "";
+      imgdiv.append(image);
 
-    //  datadiv.style.height = "50%";
+      let datadiv = document.createElement("div");
+      //  datadiv.style.border = "1px solid black";
+      datadiv.style.textAlign = "Center";
+      datadiv.style.margin = "auto";
+      datadiv.style.alignItems = "center";
+      datadiv.style.height = "50%";
 
-    let head = document.createElement("h4");
-    head.innerText = elem.name;
-    head.style.width = "100%";
-    head.style.fontSize = "15px";
+      let head = document.createElement("h4");
+      head.innerText = elem.name;
+      head.style.width = "100%";
+      head.style.fontSize = "15px";
 
-    let price1 = document.createElement("p");
-    price1.innerText = "Our Price-₹" + elem.price;
-    // price1.style.margin = "-1%";
+      let price1 = document.createElement("p");
+      price1.innerText = "Our Price-₹" + elem.price;
 
-    let price2 = document.createElement("p");
-    price2.innerText = "MRP-" + elem.strikedoffprice;
-    price2.style.fontSize = "1px";
+      let price2 = document.createElement("p");
+      price2.innerText = "MRP-" + elem.strikedoffprice;
+      price2.style.fontSize = "1px";
 
-    let button = document.createElement("button");
-    button.innerText = "Delete";
-    button.style.border = "none";
-    button.style.width = "150px";
-    button.style.height = "30px";
-    button.style.backgroundColor = "#ff6f61";
-    button.style.borderRadius = "4px";
-    button.style.color = "white";
-    button.style.cursor = "pointer";
-    button.style.fontSize = "20px";
-    button.style.marginBottom = "20px";
+      let button = document.createElement("button");
+      button.innerText = "Delete";
+      button.style.border = "none";
+      button.style.width = "150px";
+      button.style.height = "30px";
+      button.style.backgroundColor = "#ff6f61";
+      button.style.borderRadius = "4px";
+      button.style.color = "white";
+      button.style.cursor = "pointer";
+      button.style.fontSize = "20px";
+      button.style.marginBottom = "20px";
 
-    button.addEventListener("click", function () {
-      newArr.splice(i, 1);
-      localStorage.setItem("cartspage", JSON.stringify(newArr));
-      location.reload();
+      button.addEventListener("click", function () {
+        newArr.splice(i, 1);
+        localStorage.setItem("cartspage", JSON.stringify(newArr));
+        location.reload();
+      });
+
+      datadiv.append(head, price1, price2, button);
+      card.append(imgdiv, datadiv);
+
+      document.querySelector("#container").append(card);
     });
-    // button.addEventListener("click", function () {
-    //   cartsArr.push(elem);
-    //   console.log("clicked");
-    //   localStorage.setItem("cartspage", JSON.stringify(cartsArr));
-    datadiv.append(head, price1, price2, button);
-    card.append(imgdiv, datadiv);
-
-    document.querySelector("#container").append(card);
   }
-  //  document.getElementById("itemscount").innerText = newArr.length;
 
-  //   function displayTable(elem, index) {
-  //     let row = document.createElement("div");
-  //     // row.style.display = "flex";
-  //     row.style.border = "1px solid green";
-  //     row.style.width = "100%";
-  //     row.style.alignItems = "center";
+  flag = localStorage.getItem("flag") || false;
 
-  //     let image = document.createElement("img");
-  //     image.setAttribute("src", elem.image_url);
-  //     image.style.width = "18%";
-  //     // image.style.height = '50%'
+  function yoyo() {
+    if (flag == "true") {
+      alert("You Can Proceed For Payment");
+    } else if (flag == false) {
+      alert("Sign in First");
+      window.location.href = "/Login/signup.html";
+    }
+  }
 
-  //     let name = document.createElement("h1");
-  //     name.innerText = elem.name;
-  //     name.style.margin = "auto";
-
-  //     let price = document.createElement("p");
-  //     price.innerText = "₹"+elem.price;
-  //     price.style.fontSize = "35px";
-  //     price.style.margin = "auto";
-
-  //     let input = document.createElement("input");
-  //     input.setAttribute("type", "number");
-  //     input.style.width = "40px";
-  //     input.style.margin = "auto";
-  //     input.addEventListener("change", function () {
-  //       let x = +input.value;
-  //       let y = +elem.price;
-  //       document.querySelector("#tp").innerText = x += x * y;
-  //     });
-
-  //     let button = document.createElement("button");
-  //     button.innerText = "Delete";
-  //     button.addEventListener("click", function () {
-  //       newArr.splice(index, 1);
-  //       localStorage.setItem("cartspage", JSON.stringify(newArr));
-  //       location.reload();
-  //     });
-
-  //     row.append(image, name, price, input, button);
-
-  //     document.querySelector("#container").append(row);
-
-  //     document.querySelector("#itemscount").innerText = newArr.length;
-  //  }
+  function search() {
+    let x = document.querySelector("#aaaa").value;
+    console.log(x);
+    newdata = newArr.filter((elem) => {
+      return elem.name.toLowerCase().includes(x.toLowerCase());
+    });
+    document.querySelector("#container").innerHTML = "";
+    displayTable(newdata);
+    console.log(newdata);
+  }
 </script>

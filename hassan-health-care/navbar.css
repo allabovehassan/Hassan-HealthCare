@@ -17,6 +17,7 @@
   width: 15%;
   margin-right: -2%;
   margin-left: 1%;
+  cursor: pointer;
 }
 
 #navbar > #nav1 > #navimg > img {
@@ -41,11 +42,12 @@
   font-family: "Source Sans Pro", sans-serif;
   align-items: center;
   margin-left: -1%;
-  margin-right:1%;
+  margin-right: 1%;
 }
 #nav12 > h4 {
   font-weight: lighter;
   font-size: medium;
+  cursor: pointer;
 }
 
 #nav11 > h4:hover {
@@ -134,6 +136,7 @@
   height: 34px;
   width: 30%;
   margin-left: 2%;
+  cursor: pointer;
 }
 
 #nav3 {
