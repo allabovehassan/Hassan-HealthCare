@@ -34,10 +34,5 @@ function check(event) {
 
     alert("Login Again");
   }
-  // Pmatch == true && Ematch == true
-  //   ? alert("Login Successful")
-  //   : alert("Invalid Credentials");
-  // flag = true;
-  // localStorage.setItem("flag", flag);
-  // location.href = "/hassan-health-care/carts.html";
+  
 }
